@@ -18,6 +18,6 @@ func TestNewResourcePoolConfigSetter(t *testing.T) {
 }
 
 func TestBuilder(t *testing.T) {
-	resourcePool := Builder().SetName("test").SetMaxTotal(0).SetMinIdle(5).Build()
+	resourcePool := Builder().SetName("dbconnectionpool").SetMaxTotal(16).SetMinIdle(8).Build()
 	t.Log(resourcePool)
 }
